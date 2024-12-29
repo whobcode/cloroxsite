@@ -1,11 +1,53 @@
 // ==UserScript==
-// @name         CSP Fixer with Script Whitelist
-// @namespace    https://www.github.com/whobcode/cloroxsite/
-// @version      1.0
+// @name         Cloroxsite
+// @namespace    https://www.github.com/whobcode/cloroxsite.git
+// @tag          Cleansig
+// @version      pichu
+// @license       MIT
 // @description  Dynamically fixes CSP vulnerabilities without breaking the script functionality.
 // @author       whobcode
-// @match        *://*/*
-// @grant        none
+// @match        *
+// @include      *://*
+// @run-at       document-start
+// @sandbox      JavaScript
+// @grant        GM_addElement(tag_name, attributes), 
+// @grant        GM_addElement(parent_node, tag_name, attributes)
+// @grant        GM_addStyle(css)
+// @grant        GM_download(details), 
+// @grant        GM_download(url, name)
+// @grant        GM_getResourceText(name)
+// @grant        GM_getResourceURL(name)
+// @grant        GM_info
+// @grant        GM_log(message)
+// @grant        GM_notification(details, ondone), GM_notification(text, title, image, onclick)
+// @grant        GM_openInTab(url, options),
+// @grant        GM_openInTab(url, loadInBackground)
+// @grant        GM_registerMenuCommand(name, callback, options_or_accessKey)
+// @grant        GM_unregisterMenuCommand(menuCmdId)
+// @grant        GM_setClipboard(data, info, cb)
+// @grant        GM_getTab(callback)
+// @grant        GM_saveTab(tab, cb)
+// @grant        GM_getTabs(callback)
+// @grant        GM_setValue(key, value)
+// @grant        GM_getValue(key, defaultValue)
+// @grant        GM_deleteValue(key)
+// @grant        GM_listValues()
+// @grant        GM_setValues(values)
+// @grant        GM_getValues(keysOrDefaults)
+// @grant        GM_deleteValues(keys)
+// @grant        GM_addValueChangeListener(key, (key, old_value, new_value, remote) => void)
+// @grant        GM_removeValueChangeListener(listenerId)
+// @grant        GM_xmlhttpRequest(details)
+// @grant        GM_webRequest(rules, listener)
+// @grant        GM_cookie.list(details[, callback])
+// @grant        GM_cookie.set(details[, callback])
+// @grant        GM_cookie.delete(details, callback)
+// @grant        window.onurlchange
+// @grant        window.close
+// @grant        window.focus
+// @connect      *
+// @connect      self
+// @connect      localhost
 // ==/UserScript==
 
 (function () {
